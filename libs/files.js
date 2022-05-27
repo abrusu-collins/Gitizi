@@ -1,12 +1,12 @@
-let fs = require("fs");
-let path= require("path");
+import fs from "fs";
+import path from "path";
 
-module.exports={
-    getCurrentDirectoryBasename:()=>{
+
+  export function  getCurrentDirectoryBasename(){
         return path.basename(__dirname);
-    },
-    directoryExists: (filename)=>{
+    };
+    export default function directoryExists (filename){
         return fs.existsSync(filename);
     }
-}
+
 
